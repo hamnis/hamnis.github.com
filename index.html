@@ -1,9 +1,24 @@
-<html>
-<head>
-    <title>Erlend's github pages</title>
-</head>
-<body>
-<a href="maven-releases">Maven Repo</a>
-<a href="maven-snapshots">Maven Repo snapshots</a>
-</body>
-</html>
+---
+layout: default
+title: Erlend Hamnaberg
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
+  <h1>Interviews, Talks, Etc</h1>
+  <ul class="posts">
+    <li><span>10.09.2009</span> &raquo; <a href="http://tcs.java.no/tcs/?id=84FFAA0B-B2AE-462B-9A38-2BA48C4821CF">Ditch your complex clients: become RESTful</a></li>
+  </ul>
+  
+  <h1>Open Source Projects</h1>
+  <ul class="posts">
+    <li><a href="http://httpcache4j.codehaus.org/">HTTPCache4j: </a> Java HTTP cache library.</li>
+  </ul>
+</div>
+  
